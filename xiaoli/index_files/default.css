@@ -9,7 +9,7 @@ a {color:#000;font-size:14px;}
 #clock-box a {font-size:28px;text-decoration:none;}
 #clock{margin-left:48px;}
 #clock .digit {font-size:64px;}
-#canvas{margin:0 auto;width:500pxpx;height:680px;}
+#canvas{margin:0 auto;width:500px;height:680px;}
 #error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
 .hand{cursor:pointer;}
 .say{margin-left:5px;}
