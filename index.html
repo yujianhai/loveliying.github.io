@@ -22,10 +22,10 @@
         <div id="main">
             <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
             <div id="wrap">
-                /* <audio > */
-                    /* <source autoplay="autoplay" hidden loop="loop"  src="./forwe.mp3" type="audio/mpeg">
+                <audio >
+                    <source autoplay="autoplay" hidden loop="loop"  src="./forwe.mp3" type="audio/mpeg">
                     Your browser does not support this audio format.
-                </audio> */
+                </audio>
                 <div id="text">
 			        <div id="code">
 			        	<span class="say">* 致小理同学： *</span><br>
@@ -134,10 +134,10 @@
                 canvas.unbind("mousemove");
                 canvas.removeClass('hand');
             }
-            document.getElementById("wrap").innerHTML = `<audio >
+            /* document.getElementById("wrap").innerHTML = `<audio >
                     <source autoplay="autoplay" hidden loop="loop"  src="./forwe.mp3" type="audio/mpeg">
                     Your browser does not support this audio format.
-                </audio>`
+                </audio>` */
         }).mousemove(function(e){
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
