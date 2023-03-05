@@ -60,9 +60,9 @@
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
             <div class="bottom">
-                <video hidden  width="500" height="500" id="video2" controls>
-                    <source src="./nanxia.mp4"  type="video/mp4">
-                    </video>
+                <video id="video2" loop="true" preload=true autostart=true  src="./nanxia.mp3" ></video>
+
+             
                 </div>
         </div>
     
@@ -136,7 +136,7 @@
             },11100)
             setTimeout(()=>{
                 v.pause()
-            },60000)
+            },70000)
             v.volume = 0.8
             v2.play()
             v2.volume = 1
