@@ -17,6 +17,32 @@
 .STYLE1 {color: #666666}
 -->
         </style>
+
+        <style>
+            @keyframes identifier {
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+
+.xuxingchun{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.xu_img{
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%); */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: identifier 12s linear infinite;
+}            
+            </style>
 </head>
     <body>
         <div id="main">
@@ -61,7 +87,8 @@
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
         </div>
-    
+        <div class="xuxingchun">
+            <img class="xu_img" src="./xuxingchun.webp" alt=""></div>
     <script>
     </script>
 
