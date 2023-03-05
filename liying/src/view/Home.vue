@@ -36,7 +36,7 @@ export default {
     openXin() {
       setTimeout(() => {
         this.open = true;
-      }, 2000);
+      }, 0);
     },
   },
 };
@@ -135,6 +135,26 @@ export default {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  animation: tobig2 2s;
+}
+
+@keyframes tobig {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes tobig2 {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 .envelope {
   position: relative;
@@ -147,6 +167,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: tobig 2s;
 }
 
 @keyframes tosamll {
