@@ -14,7 +14,7 @@
       也爱你坚持的位置， 足下的土地。
     </div>
     <div class="bottom">
-      <video src="../assets/nanxia.mp3" controls autoplay hidden></video>
+      <video src="./nanxia.mp3" controls autoplay hidden></video>
     </div>
   </div>
 </template>
