@@ -26,11 +26,11 @@
             }
 
 .xuxingchun{
+    width: 100%;
     margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .xu_img{
     /* position: absolute;
@@ -87,8 +87,9 @@
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
         </div>
-        <div class="xuxingchun">
-            <img class="xu_img" src="./xuxingchun.webp" alt=""></div>
+        <!-- <div class="xuxingchun">
+            <img class="xu_img" src="./xuxingchun.webp" alt="">
+        </div> -->
     <script>
     </script>
 
@@ -154,14 +155,14 @@
             y = e.pageY - offset.top;
             var v = document.getElementById("video")
           var v2 = document.getElementById("nanxiaVideo")
-        v2.play()
+            v2.play()
             setTimeout(()=>{
                 v.play()
             },15100)
             setTimeout(()=>{
                 v.pause()
             },70000)
-            v.volume = 0.3
+            v.volume = 0.1
             /* v2.play() */
             /* v2.volume = 1 */
             if (seed.hover(x, y)) {
