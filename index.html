@@ -60,11 +60,10 @@
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
             <div class="bottom">
-                <video hidden width="500" height="500" id="video2" controls>
+                <video hidden  width="500" height="500" id="video2" controls>
                     <source src="./nanxia.mp4"  type="video/mp4">
                     </video>
                 </div>
-            
         </div>
     
     <script>
@@ -134,7 +133,10 @@
             var v2 = document.getElementById("video2")
             setTimeout(()=>{
                 v.play()
-            },9000)
+            },11100)
+            setTimeout(()=>{
+                v.pause()
+            },60000)
             v.volume = 0.8
             v2.play()
             v2.volume = 1
@@ -223,7 +225,7 @@
             $("#clock-box").fadeIn(1000);
             while (true) {
                 timeElapse(together);
-                $await(Jscex.Async.sleep(10000));
+                $await(Jscex.Async.sleep(1000));
             }
         }));
 
