@@ -17,9 +17,36 @@
 .STYLE1 {color: #666666}
 -->
         </style>
+
+        <style>
+            @keyframes identifier {
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+
+.xuxingchun{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xu_img{
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%); */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: identifier 12s linear infinite;
+}            
+            </style>
 </head>
     <body>
         <div id="main">
+            <video src="./nanxia.mp3" preload=true autostart=true id="nanxiaVideo"  autoplay hidden></video>
             <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
             <div id="wrap">
                 <div id="text">
@@ -39,9 +66,10 @@
               </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
-            
         </div>
-    
+        <!-- <div class="xuxingchun">
+            <img class="xu_img" src="./xuxingchun.webp" alt="">
+        </div> -->
     <script>
     </script>
 
@@ -100,11 +128,23 @@
         var seed = tree.seed;
         var foot = tree.footer;
         var hold = 1;
-
+       
         canvas.click(function(e) {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
+            var v = document.getElementById("video")
+          var v2 = document.getElementById("nanxiaVideo")
+            v2.play()
+            // setTimeout(()=>{
+            //     v.play()
+            // },15100)
+            // setTimeout(()=>{
+            //     v.pause()
+            // },70000)
+            // v.volume = 0.1
+            /* v2.play() */
+            /* v2.volume = 1 */
             if (seed.hover(x, y)) {
                 hold = 0; 
                 canvas.unbind("click");
@@ -190,7 +230,7 @@
             $("#clock-box").fadeIn(1000);
             while (true) {
                 timeElapse(together);
-                $await(Jscex.Async.sleep(10000));
+                $await(Jscex.Async.sleep(1000));
             }
         }));
 
