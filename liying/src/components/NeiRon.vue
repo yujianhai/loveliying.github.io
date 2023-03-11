@@ -53,7 +53,7 @@ data(){
  @import url(https://fonts.googleapis.com/css?family=Loved+by+the+King);
 
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 div, ul, span{
