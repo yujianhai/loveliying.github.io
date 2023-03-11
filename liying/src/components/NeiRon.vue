@@ -76,6 +76,7 @@ div, ul, span{
     }
 }
 .wrapper {
+    margin: 20px auto;
     height:80%;
     width: 80%;
     overflow: hidden;
@@ -85,7 +86,7 @@ div, ul, span{
 }
 
 .wrapper .container{
-    padding:2em 1em;
+    padding:1em 1em;
     position:relative;
     box-sizing: border-box
 }
@@ -138,13 +139,12 @@ h2 {
 
 .pikachu{
     position: relative;
-    margin-top: 2em;
-    margin-top: 4em;
-    margin-right: 20%;
     height: 10%;
+    margin-top: 1em;
+    margin-left: 40%;
     width: 140px;
     width: 0.72917rem;
-    transform: scale(3);
+    transform: scale(1.5);
 }
 
 .pikachu::before {
