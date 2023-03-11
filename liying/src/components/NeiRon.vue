@@ -79,7 +79,6 @@ div, ul, span{
     margin: 20px auto;
     /* height:80%; */
     width: 80%;
-    overflow: hidden;
     font-family: 'Loved by the King', cursive;
     background: white;
     animation: identifier 1s ease-in;
