@@ -77,7 +77,7 @@ div, ul, span{
 }
 .wrapper {
     margin: 20px auto;
-    height:80%;
+    /* height:80%; */
     width: 80%;
     overflow: hidden;
     font-family: 'Loved by the King', cursive;
