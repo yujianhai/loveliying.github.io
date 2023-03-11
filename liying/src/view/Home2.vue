@@ -3,8 +3,8 @@
     <video 
     src="@/assets/nanxia.mp4" 
     autoplay="autoplay"
-    width="300px"
-    height="300px"
+    width="0px"
+    height="00px"
     id="nanxiaVideo"
     controls></video>
     <FengMian v-if="!open" @handleOpen="changeOpen" />
