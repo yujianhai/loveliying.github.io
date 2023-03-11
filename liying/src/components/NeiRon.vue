@@ -52,11 +52,14 @@ data(){
 <style scoped>
  @import url(https://fonts.googleapis.com/css?family=Loved+by+the+King);
 
+body{
+    overflow: hidden;
+}
+
 div, ul, span{
     display: block; position: absolute;
     margin: auto; padding: 0;
     top: 0; bottom: 0; right: 0; left: 0;
-    overflow: hidden;
 }
 
 .brown { background-color: #452211;}
@@ -77,7 +80,7 @@ div, ul, span{
     width: 80%;
     font-family: 'Loved by the King', cursive;
     background: white;
-    animation: identifier 2s ease-in;
+    animation: identifier 1s ease-in;
 }
 
 .wrapper .litter-head{
