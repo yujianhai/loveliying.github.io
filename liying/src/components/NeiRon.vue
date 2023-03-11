@@ -1,0 +1,462 @@
+<template>
+  <div class="wrapper">
+    <div style="display:block;padding:2em 1em">
+        <div class="litter-head">
+         小理同学
+        </div>
+        <div class="litter-body">
+            <div class="word" v-for="(item,index) in words" :key="index">
+                {{item}}
+            </div>
+            <div class="finish">
+                余建海
+            </div>
+        </div>
+    </div>
+    <div class="pikachu">
+        <div class="head">
+            <div class="ears left brown"><div class="ears-inside yellow"></div></div>
+            <div class="ears right brown"><div class="ears-inside yellow"></div></div>
+            <div class="face yellow">
+                <span class="eye left brown"></span>
+                <span class="eye right brown"></span>
+                <span class="mouth"></span>
+                <span class="cachete left"></span>
+                <span class="cachete right"></span>
+            </div>
+        </div>
+        <div class="body yellow">
+            <div class="heart"></div>
+            <div class="paw left yellow"></div>
+            <div class="paw right yellow"></div>
+        </div>
+        <div class="leg left yellow-dark"></div>
+        <div class="leg right yellow-dark"></div>
+        <div class="tail"></div>
+    </div>
+
+</div>
+</template>
+
+<script>
+export default {
+data(){
+    return {
+        words:['想在夏天看你穿你喜欢的裙子。','在秋天和你一起去摘银杏树的叶子，然后把干枯的叶子加载我给你写的信理送给你。',
+        '当冬天的雪花飘落在窗前，那厚厚的一叠，我会在你耳边轻轻道着对你的思念。','春天是无线美好的,而有你的每一天胜似春天，每时每刻都值得珍藏。']
+    }
+}
+}
+</script>
+
+<style scoped>
+ @import url(https://fonts.googleapis.com/css?family=Loved+by+the+King);
+
+div, ul, span{
+    display: block; position: absolute;
+    margin: auto; padding: 0;
+    top: 0; bottom: 0; right: 0; left: 0;
+    overflow: hidden;
+}
+
+.brown { background-color: #452211;}
+.yellow { background-color: #ffd814}
+.yellow-dark { background-color: #e0a100}
+
+@keyframes identifier {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+.wrapper {
+    height:80%;
+    width: 80%;
+    font-family: 'Loved by the King', cursive;
+    background: white;
+    animation: identifier 2s ease-in;
+}
+
+.wrapper .litter-head{
+    position: relative;
+    text-indent:1em;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    display: block;
+}
+.wrapper .litter-body{
+        position: relative;
+    text-indent:1em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: block;
+    padding: 0em 1em;
+}
+@keyframes word-animation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+.wrapper .litter-body .word{
+    position: relative;
+    font-size: 1em;
+    text-transform: uppercase;
+    display: block;
+}
+.wrapper .litter-body .finish{
+    position: relative;
+    left: 70%;
+    font-size: 1em;
+    text-transform: uppercase;
+    display: block;
+}
+
+h2 {
+    text-transform: uppercase;
+    /* text-align: center; */
+    font-size: 2em;
+    color: #452211;
+}
+
+.pikachu{
+    top: auto;
+    right: -50%;
+    height: 10%;
+    width: 140px;
+    width: 0.72917rem;
+    transform: scale(3);
+}
+
+.pikachu::before {
+    position: absolute;
+    content: '';
+    background: rgba(0,0,0,0.15);
+    height: 10px;
+    width: 90%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 95px;
+    border-radius: 50%;
+}
+
+.pikachu .head {
+    bottom: auto;
+    height: 120px;
+    width: 120px;
+    z-index: 3;
+}
+
+.pikachu .head .face{
+    width: 120px;
+    height: 70px;
+    top: auto;
+    border-radius:  40px 40px 30px 30px;
+    z-index: 2;
+}
+
+.face .eye {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    bottom: auto;
+    top: 28px;
+    -webkit-animation: blink 4s infinite;
+}
+
+
+.eye.left {
+    right: auto;
+    left: 32px;
+}
+
+.eye.right {
+    left: auto;
+    right: 32px;
+}
+
+.face .mouth {
+     position: relative;
+    background: transparent;
+    height: 1vmin;
+    width: 1vmin;
+    border-radius: 50%;
+    border-bottom: 0.3vmin solid #4a4947;
+    left: -0.3vmin;
+    top: 1.8vmin;
+}
+.face .mouth::before {
+ position: absolute;
+    content: '';
+    background: transparent;
+    height: 1vmin;
+    width: 1vmin;
+    border-radius: 50%;
+    border-bottom: 0.3vmin solid #4a4947;
+    left: 0.7vmin;
+}
+
+.face .cachete {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    bottom: auto;
+    top: 38px;
+    background-color: #e64900;
+    z-index: 9;
+}
+
+.cachete.left {
+    right: auto;
+    left: 10px;
+}
+
+.cachete.right {
+    left: auto;
+    right: 10px;
+}
+
+
+.pikachu .head .ears{
+    width: 20px;
+    height: 90px;
+    bottom: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ears.left{
+    right: auto;
+    left: 10px;
+}
+
+.ears.right{
+    left: auto;
+    right: 10px;
+}
+
+.ears .ears-inside{
+    top: auto;
+    height: 70px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.ears.right .ears-inside{
+    position: absolute;
+    left: -50%;
+}
+
+.pikachu .body {
+    bottom: auto;
+    top: 80px;
+    height: 105px;
+    width: 130px;
+    border-radius: 80px 80px 40px 40px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.pikachu .body .paw{
+    bottom: auto;
+    top: 50px;
+    height: 15px;
+    width: 30px;
+    z-index: 9;
+    border-bottom: 1px solid #e0a100;
+    border-top: 1px solid #FFFFFF;
+}
+
+.pikachu .body .paw.left{
+    right: auto;
+    left: 15px;
+    border-radius: 0 50% 50% 0;
+}
+
+.pikachu .body .paw.right{
+    left: auto;
+    right: 15px;
+    border-radius: 50% 0 0 50%;
+}
+
+.pikachu .body .heart {
+    width: 40px;
+    height: 40px;
+    bottom: auto;
+    top: 10px;
+    z-index: 8;
+    animation:beat 0.45s infinite;
+    -webkit-animation:beat 0.45s infinite;
+}
+
+
+/* .pikachu .body .heart:before, */
+.pikachu .body .heart:before {
+    position: absolute;
+    content: "🐟";
+    left: -20px;
+    z-index: 1000;
+    width: 50px;
+    height: 30px;
+    /* left: 20px;
+    top: 30px;
+    width: 50%;
+    height: 100%;
+    background: #e64900;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 10px 10px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%; */
+}
+.pikachu .body .heart:after {
+    left: 0px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin :100% 100%;
+}
+
+.pikachu .leg {
+    z-index: 1;
+    bottom: auto;
+    top: 172px;
+    height: 20px;
+    width: 30px;
+}
+
+.pikachu .leg.left {
+    right: auto;
+    left: 20px;
+    border-radius: 80px 10px 80px 10px;
+}
+
+.pikachu .leg.right {
+    left: auto;
+    right: 20px;
+    border-radius: 10px 80px 10px 80px;
+}
+
+.pikachu .tail{
+    position: relative;
+     width: 0;
+    height: 0;
+    top: 16px;
+    transform: rotate(334deg);
+
+}
+
+.pikachu .tail::after {
+    /* z-index: 1;
+    height: 40px;
+    width: 50px;
+    left:auto;
+    bottom: auto;
+    top: 70px;
+    border-radius: 10% 30%; */
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 6vmin solid #ffd814;
+    border-radius: 80%;
+    top: 0vmin;
+    left: 0vmin;
+    transform: rotate(40deg);
+}
+.pikachu .tail::before {
+    content: '';
+    position: absolute;
+    background: #ffd814;
+    width: 5vmin;
+    height: 2vmin;
+    border-radius: 40%;
+    top: 4vmin;
+    left: 0vmin;
+    box-shadow:
+            -1.2vmin 1.8vmin #ffd814
+}
+
+.signature {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    top: auto;
+}
+
+.signature p{
+    text-align: center;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 0.85em;
+}
+
+.signature .much-heart{
+    display: inline-block;
+    position: relative;
+    margin: 0 4px;
+    height: 10px;
+    width: 10px;
+    background: #AC1D3F;
+    border-radius: 4px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.signature .much-heart::before,
+.signature .much-heart::after {
+    display: block;
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background: #AC1D3F;
+    top: -4px;
+}
+
+.signature .much-heart::after {
+    bottom: 0;
+    top: auto;
+    left: -4px;
+}
+
+.signature a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes blink{
+0% {  height: 14px; top: 28px;}
+5% {  height: 2px; top: 34px;}
+10% {  height: 14px; top: 28px;}
+40% {  height: 14px; top: 28px;}
+50% {  height: 2px; top: 34px;}
+55% {  height: 14px; top: 28px;}
+100% {  height: 14px; top: 28px;}
+}
+</style>
