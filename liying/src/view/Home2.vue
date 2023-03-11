@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div style="height:100%">
     <video 
-    src="@/assets/nanxia.mp4" 
+    src="../assets/nanxia.mp4" 
     autoplay="autoplay"
     width="0px"
     height="00px"

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div style="display:block;padding:2em 1em">
+    <div class="container">
         <div class="litter-head">
          小理同学
         </div>
@@ -78,9 +78,16 @@ div, ul, span{
 .wrapper {
     height:80%;
     width: 80%;
+    overflow: hidden;
     font-family: 'Loved by the King', cursive;
     background: white;
     animation: identifier 1s ease-in;
+}
+
+.wrapper .container{
+    padding:2em 1em;
+    position:relative;
+    box-sizing: border-box
 }
 
 .wrapper .litter-head{
@@ -91,6 +98,7 @@ div, ul, span{
     display: block;
 }
 .wrapper .litter-body{
+    box-sizing: border-box;
         position: relative;
     text-indent:1em;
     font-size: 1.5em;
@@ -129,8 +137,10 @@ h2 {
 }
 
 .pikachu{
-    top: auto;
-    right: -50%;
+    position: relative;
+    margin-top: 2em;
+    margin-top: 4em;
+    margin-right: 20%;
     height: 10%;
     width: 140px;
     width: 0.72917rem;

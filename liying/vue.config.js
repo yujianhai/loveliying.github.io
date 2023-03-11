@@ -9,6 +9,7 @@ const path = require('path');
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave:false,
+  publicPath:'/',
    configureWebpack: {
         resolve: {
             // extension:[], //内部已默认配置

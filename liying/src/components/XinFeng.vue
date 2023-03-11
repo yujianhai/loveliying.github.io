@@ -48,8 +48,8 @@ methods:{
     vh：视窗高度的百分比
 */
 .main {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background: #FFE3EC;
     font-family: 'Pangolin', cursive;
     font-size: 1vmin;
