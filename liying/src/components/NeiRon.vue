@@ -12,7 +12,15 @@
                 余建海
             </div>
         </div>
+        <div class="date">
+            ❤小理宝宝的
+            <div>{{date.day}} 天</div>
+            <div>{{date.hour}} 时</div>
+            <div>{{date.minute}} 分</div>
+            <div>{{date.second}} 秒</div>
+        </div>
     </div>
+
     <div class="pikachu">
         <div class="head">
             <div class="ears left brown"><div class="ears-inside yellow"></div></div>
@@ -44,7 +52,42 @@ data(){
     return {
         words:['想在夏天看你穿你喜欢的裙子。','在秋天和你一起去摘银杏树的叶子，然后把干枯的叶子加载我给你写的信理送给你。',
         '当冬天的雪花飘落在窗前，那厚厚的一叠，我会在你耳边轻轻道着对你的思念。','春天是无线美好的,而有你的每一天胜似春天，每时每刻都值得珍藏。']
+        ,
+        date:{
+            day:521
+        },
+        timer:null
     }
+},
+methods:{
+    getTime(){
+   var time1 = new Date('2022-11-27 5:21:13')
+    var time2 = new Date()
+    time1 = time1.getTime()
+    time2 = time2.getTime()
+    var differenceTime = time2 - time1
+    
+    let  day = Math.floor(differenceTime / (60 * 60 * 24*1000));
+    let hour = Math.floor((differenceTime - day * 24 * 60 * 60*1000) / (60*60*1000));
+    let minute = Math.floor((differenceTime - day * 24 * 60 * 60*1000 - hour * (60*60*1000)) / (60*1000));
+    let second = Math.floor(differenceTime / 1000 % 60, 10);
+    this.date.day = day
+    this.date = {
+        day,
+        hour,
+        minute,
+        second
+    }
+    }
+},
+mounted(){
+    this.getTime()
+   this.timer =  setInterval(()=>{
+        this.getTime()
+    })
+},
+beforeDestory(){
+    clearInterval(this.timer)
 }
 }
 </script>
@@ -89,6 +132,21 @@ div, ul, span{
     position:relative;
     box-sizing: border-box
 }
+.wrapper .container .date{
+    padding: 0 15%;
+    left: 10%;
+    position:relative;
+    top: 2em;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.wrapper .container .date>div{
+    position:relative;
+    height: 60px;
+    box-sizing: border-box
+}
 
 .wrapper .litter-head{
     position: relative;
@@ -97,6 +155,8 @@ div, ul, span{
     text-transform: uppercase;
     display: block;
 }
+
+
 .wrapper .litter-body{
     box-sizing: border-box;
         position: relative;
@@ -139,9 +199,8 @@ h2 {
 .pikachu{
     position: relative;
     height: 10%;
-    margin-top: 1em;
-    margin-left: 40%;
-    width: 140px;
+    margin-top: -1em;
+    margin-left: 10%;
     width: 0.72917rem;
     transform: scale(1.5);
 }
