@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="container">
         <div class="litter-head">
-         小理同学
+         小理你好哇
         </div>
         <div class="litter-body">
             <div class="word" v-for="(item,index) in words" :key="index">
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="date">
-            ❤小理宝宝的
+            小理宝宝的
             <div>{{date.day}} 天</div>
             <div>{{date.hour}} 时</div>
             <div>{{date.minute}} 分</div>
@@ -50,7 +50,7 @@
 export default {
 data(){
     return {
-        words:['希望你每天都开心，因为你真的很好很好很好','我会一直陪着你。']
+        words:['希望你每天都开心，因为你真的很好很好很好，','我会一直陪着你。']
         ,
         date:{
             day:521
