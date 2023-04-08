@@ -4,7 +4,7 @@
     src="../assets/nanxia.mp4" 
     autoplay="autoplay"
     width="0px"
-    height="00px"
+    height="0px"
     id="nanxiaVideo"
     controls></video>
     <FengMian v-if="!open" @handleOpen="changeOpen" />
