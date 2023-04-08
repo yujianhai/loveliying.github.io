@@ -1,12 +1,12 @@
 <template>
   <div style="height:100%">
-    <!-- <video 
+    <video 
     src="../assets/nanxia.mp4" 
     autoplay="autoplay"
     width="0px"
     height="00px"
     id="nanxiaVideo"
-    controls></video> -->
+    controls></video>
     <FengMian v-if="!open" @handleOpen="changeOpen" />
     <XinNeiRon v-else />
   </div>
