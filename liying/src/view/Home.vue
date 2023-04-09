@@ -6,9 +6,9 @@
     width="0px"
     height="0px"
     id="nanxiaVideo"
-    controls></video>
+    controls></video> -->
     <FengMian v-if="!open" @handleOpen="changeOpen" />
-    <XinNeiRon v-else /> -->
+    <XinNeiRon v-else />
   </div>
 </template>
 
