@@ -31,7 +31,8 @@ export default {
             this.open = value
             console.log('this.open',this.open);
             var v2 = document.getElementById("nanxiaVideo");
-            v2.play()
+            console.log('ve--->',v2);
+            v2.play();
         }
     },
     mounted(){
