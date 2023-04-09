@@ -50,7 +50,7 @@
 export default {
 data(){
     return {
-        words:['希望你每天都开心，因为你真的很好很好很好，','我会一直陪着你。','在这平静的日子里，除了想你，少有波澜']
+        words:['希望你每天都开心，因为你真的很好很好很好，','我会一直陪着你。','在这平静的日子里，除了想你，少有波澜','宝宝我爱你']
         ,
         date:{
             day:521
@@ -80,6 +80,7 @@ methods:{
     }
 },
 mounted(){
+    this.words = window.CONFIG.words;
     this.getTime()
    this.timer =  setInterval(()=>{
         this.getTime()
