@@ -119,6 +119,7 @@ div, ul, span{
     }
 }
 .wrapper {
+    position: fixed;
     margin: 20px auto;
     /* height:80%; */
     width: 80%;
