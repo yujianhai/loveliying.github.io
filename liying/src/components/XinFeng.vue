@@ -1,8 +1,5 @@
 <template>
   <div class="main">
-    <div class="qita">
-      <div class="left-button" @click="openIt('第二页')">其他内容</div>
-    </div>
     <div @click="openIt('信封')" class="container">
       <div class="envelope"></div>
       <div :class="['card', open ? 'card-animation' : '']" id="test">
@@ -27,6 +24,11 @@ export default {
     return {
       open: "",
     };
+  },
+  created() {
+    this.$eventBus.$on("open-xing", () => {
+      this.openIt("信封");
+    });
   },
   methods: {
     openIt(value) {
@@ -61,33 +63,6 @@ export default {
   justify-content: center;
 }
 
-.qita {
-  position: absolute;
-  z-index: 10000;
-  width: 70%;
-  left: 15%;
-  height: 200px;
-  color: #ffbbc1;
-  background: wheat;
-  top: 30%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-button {
-  width: 300px;
-  height: 100px;
-  color: black;
-  background: aqua;
-  text-align: center;
-  line-height: 100px;
-  font-size: 30px;
-  border-width: 0;
-  margin: 20px;
-  pointer-events: all;
-}
 /*
 使用相对定位（什么时候用相对定位或绝对定位？在文档流中相对定位的元素占有位置，而且会影响后面的元素（块元素、行内块元素），比如两个div并排，另外一个会换行。而绝对定位就是把该元素从文档流中踢出，不会占用文档流的位置，也不会影响后面的元素。）
 vmin：当前 vw 和 vh 中较小的一个值

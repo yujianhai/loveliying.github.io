@@ -53,6 +53,7 @@ export default {
   components: {
     Xinkon,
   },
+
   data() {
     return {
       words: [

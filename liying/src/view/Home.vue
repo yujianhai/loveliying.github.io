@@ -1,5 +1,6 @@
 <template>
   <div style="height: 100%">
+    <TopNav @handleOpen="changeOpen" />
     <FengMian v-if="!open" @handleOpen="changeOpen" />
     <XinNeiRon v-else-if="open === '信封'" />
     <TwoPage v-else-if="open === '第二页'" />
@@ -8,6 +9,7 @@
 
 <script>
 import FengMian from "@/components/XinFeng.vue";
+import TopNav from "@/components/TopNav.vue";
 export default {
   data() {
     return {
@@ -17,6 +19,7 @@ export default {
   },
   components: {
     FengMian,
+    TopNav,
     XinNeiRon: () => import("@/components/NeiRon.vue"),
     TwoPage: () => import("@/components/TwoPage.vue"),
   },
