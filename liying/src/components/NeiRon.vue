@@ -150,7 +150,7 @@ iframe {
   }
 }
 .wrapper {
-  position: fixed;
+  /* position: fixed; */
   /* margin: 20px auto; */
   /* height:80%; */
   width: 100%;
