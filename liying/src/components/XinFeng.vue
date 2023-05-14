@@ -36,6 +36,7 @@ export default {
       const v2 = document.getElementById("nx");
       v2.volume = 0.5;
       v2.play();
+      console.log("信封=============");
       setTimeout(() => {
         this.$emit("handleOpen", value);
       }, 3000);

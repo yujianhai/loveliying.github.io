@@ -21,10 +21,12 @@ export default {
       } else if (value == "第二页") {
         v2 = document.getElementById("cxqd");
         v2.play();
+        v2.volume = 0.3;
         this.$emit("handleOpen", value);
       } else if (value === "") {
         v2 = document.getElementById("windy");
         this.$emit("handleOpen", value);
+        v2.volume = 0.3;
       }
       v2.volume = 0.5;
       v2.play();
