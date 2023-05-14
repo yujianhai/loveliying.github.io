@@ -16,7 +16,9 @@ export default {
       });
       console.log("music", music);
       if (value == "信封") {
-        this.$eventBus.$emit("open-xing");
+        this.$eventBus.$emit("信封");
+        const v2 = document.getElementById("nx");
+        v2.play();
       } else if (value == "第二页") {
         const v2 = document.getElementById("cxqd");
         v2.play();
