@@ -38,7 +38,7 @@ export default {
       v2.play();
       console.log("信封=============");
       setTimeout(() => {
-        this.$emit("handleOpen", value);
+        this.$eventBus.$emit("page", value);
       }, 3000);
     },
   },

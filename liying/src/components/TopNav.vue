@@ -22,10 +22,10 @@ export default {
         v2 = document.getElementById("cxqd");
         v2.play();
         v2.volume = 0.3;
-        this.$emit("handleOpen", value);
+        this.$eventBus.$emit("page", value);
       } else if (value === "") {
         v2 = document.getElementById("windy");
-        this.$emit("handleOpen", value);
+        this.$eventBus.$emit("page", value);
         v2.volume = 0.3;
       }
       v2.volume = 0.5;

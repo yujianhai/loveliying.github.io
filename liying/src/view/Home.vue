@@ -1,7 +1,7 @@
 <template>
   <div style="height: 100%">
-    <TopNav @handleOpen="changeOpen" />
-    <FengMian v-if="!open" @handleOpen="changeOpen" />
+    <TopNav />
+    <FengMian v-if="!open" />
     <XinNeiRon v-else-if="open === '信封'" />
     <TwoPage v-else-if="open === '第二页'" />
   </div>
@@ -11,6 +11,12 @@
 import FengMian from "@/components/XinFeng.vue";
 import TopNav from "@/components/TopNav.vue";
 export default {
+  created() {
+    this.$eventBus.$on("page", (value) => {
+      this.open = value;
+      console.log("页面", this.open);
+    });
+  },
   data() {
     return {
       open: "",
@@ -24,10 +30,10 @@ export default {
     TwoPage: () => import("@/components/TwoPage.vue"),
   },
   methods: {
-    changeOpen(value) {
-      this.open = value;
-      console.log("页面", this.open);
-    },
+    // changeOpen(value) {
+    //   this.open = value;
+    //   console.log("页面", this.open);
+    // },
   },
   mounted() {},
 };
