@@ -15,17 +15,19 @@ export default {
         m.pause();
       });
       console.log("music", music);
+      let v2 = null;
       if (value == "信封") {
-        this.$eventBus.$emit("信封");
-        const v2 = document.getElementById("nx");
-        v2.play();
+        this.$eventBus.$emit("open-xing");
       } else if (value == "第二页") {
-        const v2 = document.getElementById("cxqd");
+        v2 = document.getElementById("cxqd");
         v2.play();
         this.$emit("handleOpen", value);
-      } else {
+      } else if (value === "") {
+        v2 = document.getElementById("windy");
         this.$emit("handleOpen", value);
       }
+      v2.volume = 0.5;
+      v2.play();
     },
   },
 

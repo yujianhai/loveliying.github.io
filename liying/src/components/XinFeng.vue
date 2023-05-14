@@ -34,6 +34,7 @@ export default {
     openIt(value) {
       this.open = value;
       const v2 = document.getElementById("nx");
+      v2.volume = 0.5;
       v2.play();
       setTimeout(() => {
         this.$emit("handleOpen", value);
