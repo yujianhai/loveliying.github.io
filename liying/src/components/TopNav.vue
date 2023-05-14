@@ -10,12 +10,17 @@
 export default {
   methods: {
     openIt(value) {
-      console.log("建海嗨嗨");
+      const music = Array.from(document.getElementsByClassName("music"));
+      music.forEach((m) => {
+        m.pause();
+      });
+      console.log("music", music);
       if (value == "信封") {
         this.$eventBus.$emit("open-xing");
-        // setTimeout(() => {
-        //   this.$emit("handleOpen", value);
-        // }, 3000);
+      } else if (value == "第二页") {
+        const v2 = document.getElementById("cxqd");
+        v2.play();
+        this.$emit("handleOpen", value);
       } else {
         this.$emit("handleOpen", value);
       }

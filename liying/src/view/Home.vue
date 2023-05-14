@@ -26,9 +26,7 @@ export default {
   methods: {
     changeOpen(value) {
       this.open = value;
-      console.log("va--", this.open);
-      var v2 = document.getElementById("nanxiaVideo");
-      v2.play();
+      console.log("页面", this.open);
     },
   },
   mounted() {},
