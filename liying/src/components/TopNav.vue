@@ -1,15 +1,39 @@
 <template>
   <div class="qita">
-    <div class="left-button" @click="openIt('')">回到封面</div>
-    <div class="left-button" @click="openIt('第二页')">春夏秋冬</div>
-    <div class="left-button" @click="openIt('信封')">写给小理</div>
+    <div
+      class="left-button"
+      :class="{ active: activeIndex == 0 }"
+      @click="openIt('', 0)"
+    >
+      回到封面
+    </div>
+    <div
+      class="left-button"
+      :class="{ active: activeIndex == 1 }"
+      @click="openIt('第二页', 1)"
+    >
+      春夏秋冬
+    </div>
+    <div
+      class="left-button"
+      :class="{ active: activeIndex == 2 }"
+      @click="openIt('信封', 2)"
+    >
+      写给小理
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      activeIndex: 0,
+    };
+  },
   methods: {
-    openIt(value) {
+    openIt(value, index) {
+      this.activeIndex = index;
       const music = Array.from(document.getElementsByClassName("music"));
       music.forEach((m) => {
         m.pause();
@@ -58,12 +82,17 @@ export default {
   width: 300px;
   height: 100px;
   color: black;
-  background: aqua;
+  background: white;
   text-align: center;
   line-height: 100px;
   font-size: 30px;
   border-width: 0;
   margin: 20px;
   pointer-events: all;
+  border-radius: 10px;
+}
+
+.active {
+  box-shadow: 0 0 8px 8px pink;
 }
 </style>
