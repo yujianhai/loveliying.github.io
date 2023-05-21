@@ -1,6 +1,6 @@
 <template>
   <div class="two-page">
-    <div class="top">小理同学下午好</div>
+    <div class="top">d</div>
     <div class="body"></div>
   </div>
 </template>

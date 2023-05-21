@@ -1,7 +1,7 @@
 <template>
   <div class="qita">
     <div class="left-button" @click="openIt('')">回到封面</div>
-    <div class="left-button" @click="openIt('第二页')">其他内容</div>
+    <div class="left-button" @click="openIt('第二页')">春夏秋冬</div>
     <div class="left-button" @click="openIt('信封')">写给小理</div>
   </div>
 </template>
@@ -21,14 +21,13 @@ export default {
       } else if (value == "第二页") {
         v2 = document.getElementById("cxqd");
         v2.play();
-        v2.volume = 0.3;
+        v2.volume = 1;
         this.$eventBus.$emit("page", value);
       } else if (value === "") {
         v2 = document.getElementById("windy");
         this.$eventBus.$emit("page", value);
         v2.volume = 0.3;
       }
-      v2.volume = 0.5;
       v2.play();
     },
   },
