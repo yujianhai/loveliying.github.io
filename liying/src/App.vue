@@ -22,7 +22,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-    background: #FFE3EC;
+  overflow-x: hidden;
 }
 #app {
   margin: 0;
