@@ -44,7 +44,7 @@ export default {
 }
 
 .body {
-  font-size: 40px;
+  font-size: 70px;
 }
 
 div {
