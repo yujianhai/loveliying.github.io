@@ -98,8 +98,8 @@ class FwhfStarrySky {
     drawMoon() {
         this.context.beginPath()
         var MoonStyle = this.context.createRadialGradient(300, 150, 38, 300, 150, 50)
-        MoonStyle.addColorStop(0, this.isNight() ? 'rgba(255,255,255,1)' : 'rgba(255,215,0,1)')
-        MoonStyle.addColorStop(1, this.isNight() ? 'rgba(255,255,255,1)' : 'rgba(255,215,0,0)')
+        MoonStyle.addColorStop(0, this.isNight() ? 'rgba(255,255,255,0.71)' : 'rgba(255,215,0,1)')
+        MoonStyle.addColorStop(1, this.isNight() ? 'rgba(135,206,250,0.3)' : 'rgba(255,215,0,0)')
         this.context.fillStyle = MoonStyle
         this.context.arc(300, 150, 50, 0, 2 * Math.PI)
         this.context.fill()
@@ -150,7 +150,7 @@ class FwhfStarrySky {
     isNight() {
         const now = new Date()
         let currentHour = now.getHours()
-        if (currentHour >= 19 || currentHour <= 7) {
+        if (currentHour >= 18 || currentHour <= 7) {
             return true
         } else {
             return false

@@ -12,20 +12,24 @@ const handelClick = (type) => {
 }
 </script>
 <template>
-    <div @click="handelClick('LiuYan')" class="container">
-        <div class="envelope"></div>
-        <div :class="['card', open ? 'card-animation' : '']" id="test">
-            <h1 class="message"></h1>
-            <div class="pikachu">
-                <div class="limbs"></div>
-                <div class="heart"></div>
-                <div class="arms"></div>
-                <div class="smile"></div>
+    <div>
+        <div @click="handelClick('LiuYan')" class="container">
+            <!-- <span class="text">順頌時祺，秋遂冬禧</span> -->
+            <div class="envelope"></div>
+            <div :class="['card', open ? 'card-animation' : '']" id="test">
+                <span class="message">亲爱的小理宝宝...</span>
+                <img class="img" src="../assets/gif/lala.gif" alt="" />
+                <!-- <div class="pikachu">
+                    <div class="limbs"></div>
+                    <div class="heart"></div>
+                    <div class="arms"></div>
+                    <div class="smile"></div>
+                </div> -->
             </div>
+            <div class="cover"></div>
+            <div :class="['lid', open ? 'lid-animation' : '']"></div>
+            <div class="shadow"></div>
         </div>
-        <div class="cover"></div>
-        <div :class="['lid', open ? 'lid-animation' : '']"></div>
-        <div class="shadow"></div>
     </div>
 </template>
 
@@ -42,12 +46,22 @@ const handelClick = (type) => {
 vmin：当前 vw 和 vh 中较小的一个值
 vmax：当前 vw 和 vh 中较大的一个值
 */
+
+@media screen and (max-width: 580px) {
+    .container {
+        margin-top: 50vmin !important;
+        transform: scale(1.5);
+        transform-origin: center center;
+    }
+}
+
 .container {
-    margin-top: 40vmin;
+    margin-top: 20vmin;
     position: relative;
     pointer-events: all;
     cursor: pointer;
     transform: scale(1.5);
+    transform-origin: center center;
 }
 /*相对定位，并设置背景色和大小*/
 .envelope {
@@ -118,8 +132,21 @@ vmax：当前 vw 和 vh 中较大的一个值
     animation: open-rev 2s;
 }
 
+.lid::before {
+    top: 0;
+    position: absolute;
+    /* width: 300px; */
+    content: '順頌時祺，秋遂冬禧。';
+    text-align: center;
+    width: fit-content;
+    z-index: 100;
+    width: 150px;
+    font-size: 12px;
+    transform: translate(-50%, -200%);
+}
+
 .lid.lid-animation {
-    animation: open 0.5s;
+    animation: open 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -338,5 +365,27 @@ vmax：当前 vw 和 vh 中较大的一个值
     border-radius: 50%;
     border-bottom: 0.3vmin solid #4a4947;
     left: 0.7vmin;
+}
+
+@media screen and (min-width: 580px) {
+    .text {
+        font-size: 10px !important;
+    }
+}
+.text {
+    /* position: absolute;
+    display: block;
+    z-index: 100;
+    font-size: 14px;
+    width: 300px;
+    text-align: center;
+    left: 50%;
+    top: 3vmin;
+    transform: translateX(-50%); */
+}
+
+.img {
+    width: 100px;
+    height: 100px;
 }
 </style>

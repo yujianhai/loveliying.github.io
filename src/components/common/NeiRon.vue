@@ -5,7 +5,7 @@ const content = window.words
 const isNight = () => {
     const now = new Date()
     let currentHour = now.getHours()
-    if (currentHour >= 19 || currentHour <= 7) {
+    if (currentHour >= 18 || currentHour <= 7) {
         return true
     } else {
         return false

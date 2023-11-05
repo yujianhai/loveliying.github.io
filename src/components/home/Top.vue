@@ -28,6 +28,24 @@ const getMenuName = (type) => {
 
     return nameObj[type]
 }
+
+const isNightClass = ref('')
+
+const isNight = () => {
+    const now = new Date()
+    let currentHour = now.getHours()
+    if (currentHour >= 18 || currentHour <= 7) {
+        return true
+    } else {
+        return false
+    }
+}
+
+if (isNight()) {
+    isNightClass.value = 'white'
+} else {
+    isNightClass.value = 'black'
+}
 </script>
 <template>
     <div class="top">
@@ -57,7 +75,7 @@ const getMenuName = (type) => {
     text-align: center;
     line-height: 30px;
     font-size: 12px;
-    color: black;
+    color: #dca68b;
 }
 .top .item.active {
     box-shadow: 0 0 4px 4px pink;

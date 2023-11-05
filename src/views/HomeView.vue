@@ -77,6 +77,7 @@ img {
 }
 
 .subject-page {
+    position: relative;
     transform: all 2s;
 }
 </style>
