@@ -35,14 +35,23 @@ const changeMenu = (value) => {
     v2.play()
     nowMusic = value
 }
+
+const gitNum = ref(0)
+let timer2 = null
+const showAnimationGif = () => {
+    timer2 = setInterval(() => {
+        gitNum.value = gitNum.value + 1
+    }, 6000)
+}
+
+showAnimationGif()
 </script>
 <template>
     <div class="imgs">
-        <img class="xixi" src="../../src/assets/gif/xixi.gif" alt="" />
-
-        <img draggable="true" class="haha" src="../../src/assets/gif/heihei.gif" alt="" />
-        <img draggable="true" class="haha" src="../../src/assets/gif/haha.gif" alt="" />
-        <img draggable="true" class="haha" src="../../src/assets/gif/haha2.gif" alt="" />
+        <img :style="{ opacity: gitNum % 4 === 0 ? 1 : 0 }" class="haha resove" src="../../src/assets/gif/xixi.gif" alt="" />
+        <img :style="{ opacity: gitNum % 4 === 1 ? 1 : 0 }" class="haha" src="../../src/assets/gif/heihei.gif" alt="" />
+        <img :style="{ opacity: gitNum % 4 === 2 ? 1 : 0 }" class="haha" src="../../src/assets/gif/haha.gif" alt="" />
+        <img :style="{ opacity: gitNum % 4 === 3 ? 1 : 0 }" class="haha" src="../../src/assets/gif/haha2.gif" alt="" />
     </div>
 
     <div class="container">
@@ -59,11 +68,17 @@ const changeMenu = (value) => {
 </template>
 
 <style scoped>
-img {
-    width: 20vmin;
-    height: 20vmin;
+.haha {
+    width: 13vmin;
+    height: 13vmin;
     pointer-events: none;
     z-index: 0;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.haha.resove {
+    transform: rotateY(180deg);
 }
 
 .imgs {
@@ -74,6 +89,7 @@ img {
     bottom: 1vmin;
     display: flex;
     justify-content: space-between;
+    z-index: 0;
 }
 
 .subject-page {

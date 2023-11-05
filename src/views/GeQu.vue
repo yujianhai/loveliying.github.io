@@ -11,7 +11,7 @@ const geci = `秋天该很好 你若尚在场 秋风即使带凉 亦漂亮 深�
 
 <template>
     <div>
-<div class="top">春夏秋冬</div>
+<div class="top">《春夏秋冬》</div>
     <div class="body">
       <p>
         <div v-for="(item, index) in geci.split(' ')" :key="index">

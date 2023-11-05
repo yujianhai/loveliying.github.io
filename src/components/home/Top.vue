@@ -62,11 +62,22 @@ if (isNight()) {
     }
 }
 .top {
+    position: sticky;
+    top: 0;
     padding-top: 0px;
     margin-top: 5px;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    pointer-events: all;
+    z-index: 22;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top::after {
+    content: '';
+    filter: blur(10px);
 }
 
 .top .item {

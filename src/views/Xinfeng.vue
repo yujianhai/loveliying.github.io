@@ -142,7 +142,22 @@ vmax：当前 vw 和 vh 中较大的一个值
     z-index: 100;
     width: 150px;
     font-size: 12px;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -350%);
+}
+
+@media screen and (min-width: 1080px) {
+    .lid::before {
+        top: 0;
+        position: absolute;
+        /* width: 300px; */
+        content: '順頌時祺，秋遂冬禧。';
+        text-align: center;
+        width: fit-content;
+        z-index: 100;
+        width: 150px;
+        font-size: 8px !important;
+        transform: translate(-50%, -250%);
+    }
 }
 
 .lid.lid-animation {
@@ -225,6 +240,7 @@ vmax：当前 vw 和 vh 中较大的一个值
 .message {
     position: absolute;
     top: 5vmin;
+    font-size: 10px;
     word-spacing: 5px;
 }
 

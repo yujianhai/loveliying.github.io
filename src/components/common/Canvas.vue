@@ -13,7 +13,7 @@ class FwhfStarrySky {
         this.starArr = []
         this.meteorArr = []
         this.width = window.innerWidth
-        this.height = window.innerHeight > document.body.clientHeight ? window.innerHeight : document.body.clientHeight
+        this.height = window.innerHeight > document.body.offsetHeight ? window.innerHeight : document.body.offsetHeight
         // this.height = window.innerHeight
         this.skyColor = '#000211'
         this.moonColor = '#080d23'

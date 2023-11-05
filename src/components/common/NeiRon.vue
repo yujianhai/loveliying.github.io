@@ -71,7 +71,8 @@ if (isNight()) {
     padding: 0px 40px;
     font-size: 12px;
     color: v-bind(isNightClass);
-    padding-bottom: 6vmin;
+    /* padding-bottom: 6vmin; */
+    z-index: 2;
 }
 
 @media screen and (max-width: 580px) {
