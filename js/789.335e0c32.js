@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkliying"]=self["webpackChunkliying"]||[]).push([[789],{9789:function(t,s,i){i.r(s),i.d(s,{default:function(){return r}});var n=function(){var t=this;t._self._c;return t._m(0)},e=[function(){var t=this,s=t._self._c;return s("div",{staticClass:"two-page"},[s("div",{staticClass:"top"},[t._v("小理同学下午好")]),s("div",{staticClass:"body"})])}],l={},u=l,a=i(1001),c=(0,a.Z)(u,n,e,!1,null,"62821e5c",null),r=c.exports}}]);
-//# sourceMappingURL=789.335e0c32.js.map
