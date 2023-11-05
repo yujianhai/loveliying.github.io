@@ -5,7 +5,10 @@ const open = ref(false)
 // 接收父组件传递过来的方法
 const emit = defineEmits(['changeMenu'])
 const handelClick = (type) => {
-    emit('changeMenu', type)
+    setTimeout(() => {
+        emit('changeMenu', type)
+    }, 3000)
+    open.value = true
 }
 </script>
 <template>

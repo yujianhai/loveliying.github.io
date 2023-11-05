@@ -5,7 +5,6 @@ const content = window.words
 const isNight = () => {
     const now = new Date()
     let currentHour = now.getHours()
-    console.log(currentHour)
     if (currentHour >= 19 || currentHour <= 7) {
         return true
     } else {
@@ -35,7 +34,6 @@ let timer = null
 
 onMounted(() => {
     getTime()
-    console.log('哈哈哈')
     timer = setInterval(() => {
         getTime()
     }, 1000)
@@ -51,8 +49,6 @@ if (isNight()) {
 } else {
     isNightClass.value = 'black'
 }
-
-console.log(isNightClass.value)
 </script>
 <template>
     <div class="letter">

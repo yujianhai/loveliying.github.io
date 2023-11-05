@@ -13,9 +13,9 @@ const props = defineProps({
 const currentMenu = ref('Xinfeng')
 
 const handelClick = function (item) {
+    console.log(props.currentMenu)
     //调用父组件传递过来的方法，传入参数修改父组件的值
     currentMenu.value = item
-    console.log(props, item)
     emit('changeMenu', item)
 }
 
@@ -31,7 +31,7 @@ const getMenuName = (type) => {
 </script>
 <template>
     <div class="top">
-        <div @click="handelClick(item)" :class="{ active: item == currentMenu }" class="item" v-for="(item, index) in state" :key="index">
+        <div @click="handelClick(item)" :class="{ active: item == props.currentMenu }" class="item" v-for="(item, index) in state" :key="index">
             {{ getMenuName(item) }}
         </div>
     </div>
