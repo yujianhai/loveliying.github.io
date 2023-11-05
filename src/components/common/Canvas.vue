@@ -213,10 +213,7 @@ class FwhfStarrySky {
   isNight() {
     const now = new Date()
     let currentHour = now.getHours()
-    if (currentHour > 12) {
-      currentHour = currentHour % 12
-    }
-    if (this.hours >= 19 || this.hours <= 7) {
+    if (this.currentHour >= 19 || this.currentHour <= 7) {
       return true
     } else {
       return false

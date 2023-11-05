@@ -4,18 +4,25 @@ const state = ref(['Xinfeng', 'GeQu', 'LiuYan'])
 
 // 接收父组件传递过来的方法
 const emit = defineEmits(['changeMenu'])
+const props = defineProps({
+  currentMenu: {
+    type: String,
+    default: 'Xinfeng',
+  },
+})
 const currentMenu = ref('Xinfeng')
 
 const handelClick = function (item) {
   //调用父组件传递过来的方法，传入参数修改父组件的值
   currentMenu.value = item
+  console.log(props, item)
   emit('changeMenu', item)
 }
 
 const getMenuName = (type) => {
   const nameObj = {
     Xinfeng: '回到封面',
-    GeQu: '春夏秋冬',
+    GeQu: '《春夏秋冬》',
     LiuYan: '写给小理',
   }
 
@@ -37,6 +44,11 @@ const getMenuName = (type) => {
 </template>
 
 <style scoped>
+@media screen and (max-width: 580px) {
+  .top .item {
+    font-size: 18px !important;
+  }
+}
 .top {
   padding-top: 0px;
   margin-top: 5px;
@@ -46,13 +58,15 @@ const getMenuName = (type) => {
 }
 
 .top .item {
-  width: 100px;
+  width: 150px;
   height: 30px;
   text-align: center;
   line-height: 30px;
   font-size: 12px;
+  color: black;
 }
 .top .item.active {
   box-shadow: 0 0 4px 4px pink;
+  color: #f1939c;
 }
 </style>

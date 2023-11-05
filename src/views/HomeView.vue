@@ -23,19 +23,20 @@ const changeMenu = (value) => {
 }
 </script>
 <template>
-  <img
-    draggable="true"
-    class="haha"
-    src="../../src/assets/gif/haha.gif"
-    alt=""
-  />
-  <img class="xixi" src="../../src/assets/gif/xixi.gif" alt="" />
+  <div class="imgs">
+    <img
+      draggable="true"
+      class="haha"
+      src="../../src/assets/gif/haha.gif"
+      alt=""
+    />
+    <img class="xixi" src="../../src/assets/gif/xixi.gif" alt="" />
+  </div>
 
   <div class="container">
     <audio
       src="../src/assets/music/nx-zuizhon2.mp3"
       loop
-      autoplay="autoplay"
       preload="auto"
       width="0px"
       height="0px"
@@ -45,7 +46,6 @@ const changeMenu = (value) => {
     <audio
       src="../src/assets/music/mycxqd.mp3"
       loop
-      autoplay="autoplay"
       preload="auto"
       width="0px"
       height="0px"
@@ -55,7 +55,6 @@ const changeMenu = (value) => {
     <audio
       src="../src/assets/music/windy.mp3"
       loop
-      autoplay="autoplay"
       preload="auto"
       width="0px"
       height="0px"
@@ -85,14 +84,18 @@ img {
   height: 20vmin;
   pointer-events: none;
   z-index: 0;
+  bottom: 6vmin;
 }
 
 .xixi {
-  bottom: 6vmin;
   left: -2vmin;
 }
 .haha {
   right: 0vmin;
-  bottom: 6vmin;
+}
+
+.imgs {
+  position: static;
+  bottom: 0;
 }
 </style>

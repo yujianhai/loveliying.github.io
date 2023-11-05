@@ -5,9 +5,6 @@ const content = window.words
 const isNight = () => {
   const now = new Date()
   let currentHour = now.getHours()
-  if (currentHour > 12) {
-    currentHour = currentHour % 12
-  }
   if (currentHour >= 19 || currentHour <= 7) {
     return true
   } else {
@@ -34,24 +31,25 @@ const isNightClass = ref(!isNight() ? 'black' : 'white')
   padding: 0px 40px;
   font-size: 12px;
   color: v-bind(isNightClass);
+  padding-bottom: 6vmin;
 }
 
-@media screen and (min-width: 200px) and (max-width: 560px) {
+@media screen and (max-width: 580px) {
   .letter {
     padding: 0px 40px;
-    font-size: 16px;
-    /* color: v-bind(isNightClass); */
+    padding-bottom: 6vmin;
+    color: v-bind(isNightClass);
   }
 
   .content-head {
     margin-top: 3vmin;
     font-family: '宋体';
-    font-size: 16px;
+    font-size: 20px !important;
   }
 
   .content-neiron {
     padding: 1vmin 0;
-    font-size: 16px;
+    font-size: 20px !important;
     font-family: '宋体';
   }
 }

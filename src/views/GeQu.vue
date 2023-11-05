@@ -24,7 +24,7 @@ const geci = `秋天该很好 你若尚在场 秋风即使带凉 亦漂亮 深�
 </template>
 <style scoped>
 .top {
-  margin-top: 50px;
+  margin-top: 3vmin;
   font-size: 20px;
   color: black;
   text-align: center;
@@ -33,6 +33,7 @@ const geci = `秋天该很好 你若尚在场 秋风即使带凉 亦漂亮 深�
 .body {
     width: 100%;
   font-size: 15px;
+  text-align: center;
 }
 
 </style>
