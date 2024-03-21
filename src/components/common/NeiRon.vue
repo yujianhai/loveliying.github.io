@@ -53,9 +53,7 @@ if (isNight()) {
 <template>
     <div class="letter">
         <div class="content-head">亲爱的小理同学：</div>
-        <div class="content content-neiron" :key="index" v-for="(item, index) in content.split(' ')">
-            {{ item }}
-        </div>
+        <div class="content content-neiron" :key="index" v-for="(item, index) in content.split(' ')">{{ item }}</div>
         <div class="content content-date">余建海</div>
         <div class="content content-date">
             和小理宝宝在一起的
@@ -97,6 +95,7 @@ if (isNight()) {
         padding: 3vmin 0 !important;
         font-size: 20px !important;
         font-family: '宋体';
+        line-height: 15px;
     }
 }
 
